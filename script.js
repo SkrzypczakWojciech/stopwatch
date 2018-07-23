@@ -4,7 +4,7 @@ class Stopwatch {
 		this.display = display;
 		this.reset();
 		this.print(this.times);
-	};
+	}
 
 	reset() {
 		this.times = {
@@ -12,7 +12,7 @@ class Stopwatch {
 			seconds: 0,
 			miliseconds: 0
 		};
-	};
+	}
 
 	print() {
 		this.display.innerText = this.format(this.times);
@@ -46,13 +46,13 @@ class Stopwatch {
 			this.times.seconds = 0;
 		};
 
-	};
+	}
 
 	stop() {
 		this.running = false;
 		clearInterval(this.watch);
-	};
-};
+	}
+}
 
 function pad0(value) {
 	let result = value.toString();
@@ -60,7 +60,7 @@ function pad0(value) {
 		result = '0' + result;
 	};
 	return result;
-};
+}
 
 
 const stopwatch = new Stopwatch(
